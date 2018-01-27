@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Script/angular.min.js"></script>
+    <script src="Script/EventHandlingController.js"></script>
+    <!--<script>
+        //function f1(num1, num2) {
+        //    var r = num1 + num2;
+        //    document.write(r);
+        //    return r;
+        //};
+
+        //   var h = f1(100);
+        // var h = f1(100, 400);
+        // alert(h);
+
+        //document.write(h);
+    </script>-->
+
+</head>
+<body ng-app="mymod">
+   
+    <div ng-controller="mycon">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Likes/Dislikes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies">
+                    <td> {{ technology.name }} </td>
+                    <td> {{ technology.likes }} </td>
+                    <td> {{ technology.dislikes }} </td>
+                    <td>
+                        <input type="button" value="Like" ng-click="incrementLike(technology)">
+                        <input type="button" value="DisLike" ng-click="incrementDislike(technology)">
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+</html>

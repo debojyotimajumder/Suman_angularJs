@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Script/angular.min.js"></script>
+    <script src="Script/Ns_ng-repeat.js"></script>
+    <link href="CSS/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body ng-app="mymodule">
+    <div id="dd1" ng-controller="myconn">
+        <ul>
+            <li ng-repeat="country in countries">
+                {{ country.name }} -- index value= {{ $index }}
+                <ul>
+                    <li ng-repeat="city in country.cities">
+                        {{ city.name }} - Parent Index = {{ $parent.$index }} , Index = {{ $index }}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+
+        <!--ng-init="pindex=$index"-->
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<div id="d1" style="background-color:blue">
+      <h1>Hello,Welcome to Ardent</h1>
+    </div>
+    <br />
+    <div id="d2">
+      <h6> Welcome,To UEM,KOLKATA</h6>
+        <marquee><h1>Hello,Abhijit,Welcome to ARDENT</h1></marquee>
+        <mark>Click here</mark>
+        <input id="Text1" type="text" placeholder="Enter your name" />
+    </div>-->
+</body>
+</html>

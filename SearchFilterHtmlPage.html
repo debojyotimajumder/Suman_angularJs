@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Script/angular.min.js"></script>
+    <script src="Script/Filter_data.js"></script>
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+</head>
+<body ng-app="hi_filter">
+    <div ng-controller="con_filter">
+       Search  :: <input type="text" placeholder="Search" ng-model="searchtext" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>DOB</th>
+                    <th>Gender</th>
+                    <th>Salary(number)</th>
+                    <th>Salary(currency)</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr ng-repeat="emp in employees | filter:searchtext ">
+                    <td> {{ emp.name | uppercase }}</td>
+                    <td>{{ emp.dob | date:"dd/MM/yyyy" }}</td>
+                    <td>{{ emp.gender }}</td>
+                    <td>{{ emp.salary | number:2 }}</td>
+                    <td>{{ emp.salary | currency }}</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+
+</body>
+</html>

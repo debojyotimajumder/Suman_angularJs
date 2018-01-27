@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Script/angular.min.js"></script>
+   
+</head>
+<body ng-app="">
+    <div ng-init="employees = [
+                    { name:'sachin',gender:'Male',city:'Mumbai'},
+                    { name:'Virat',gender:'Male',city:'Delhi'}
+         ]">
+        <table>
+            <thead>
+                <tr>
+                    <td>name</td>
+                    <td>gender</td>
+                    <td>city</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="emp in employees">
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.gender}}</td>
+                    <td>{{emp.city}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+
+</body>
+</html>

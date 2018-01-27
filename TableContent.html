@@ -1,0 +1,25 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="emp in employee">
+            <td>{{emp.name}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.city}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+        <!--<tr>
+            <td>{{ employee[0].name }}</td>
+            <td>{{ employee[0].gender }}</td>
+            <td>{{ employee[0].city }}</td>
+            <td>{{ employee[0].salary }}</td>
+
+        </tr>-->
+    </tbody>
+</table>
